@@ -1,9 +1,9 @@
 from flask import Flask, request
 import json
-from word_search.prefix_search import make_trie, get_prefix_matched_result
-from word_search.substr_search import generate_ngram
-from word_search.data import load_data
-from word_search.spell_corrector import correction
+from autocomplete.prefix_search import make_trie, get_prefix_matched_result
+from autocomplete.substr_search import generate_ngram
+from autocomplete.data import load_data
+from autocomplete.spell_corrector import correction
 
 
 WORDS_FREQ = load_data()
