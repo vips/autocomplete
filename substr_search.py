@@ -1,5 +1,19 @@
-from nltk import ngrams
 from collections import defaultdict
+
+def ngrams(sequence,n):
+    sequence = iter(sequence)
+    history = []
+    while n > 1:
+        try:
+            next_item = next(sequence)
+        except:
+            return
+        history.append(next_item)
+        n -= 1
+    for item in sequence:
+        history.append(item)
+        yield tuple(history)
+        del history[0]
 
 def generate_ngram(word_list):
 	"""
