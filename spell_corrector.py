@@ -1,6 +1,6 @@
 import re
 from collections import Counter
-from autocomplete.data import load_data
+from data import load_data
 
 def words(text): return re.findall(r'\w+', text.lower())
 
