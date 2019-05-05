@@ -1,4 +1,4 @@
-from search_api import app
+from search_api import application
 
 if __name__ == "__main__":
-    app.run()
+    application.run()

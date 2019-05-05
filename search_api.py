@@ -14,9 +14,9 @@ ngram_index_data = generate_ngram(WORDS_FREQ.keys())
 
 result_limit = 25
 
-app = Flask(__name__)
+application = Flask(__name__)
 
-@app.route("/search", methods=('GET',))
+@application.route("/search", methods=('GET',))
 def search_api():
 	start_time = time.time()*1000
 	global result_limit
